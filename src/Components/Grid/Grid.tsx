@@ -16,7 +16,6 @@ export const Grid = ({ grid, setHoveredColumn, dropPiece }: GridProps) => {
         onClick={() => dropPiece(colIndex)}
       >
         {column.map((cell, rowIndex) => {
-          console.log('%c cell: ', 'color: crimson; font-weight: bold;', cell);
           return (
             <div className={styles.gridCell} key={`${colIndex}-${rowIndex}`}>
               {cell === 1 && <div className={styles.player1Piece}></div>}

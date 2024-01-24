@@ -1,42 +1,43 @@
 .grid {
   display: grid;
-  width: 70vw;
-  height: 60vw;
-  max-width: 700px;
-  max-height: 600px;
+  gap: 1vw;
   grid-template-columns: repeat(var(--column-count), 1fr);
   grid-template-rows: repeat(var(--row-count), 1fr);
-  gap: 1vw;
+  height: 60vw;
+  max-height: 600px;
+  max-width: 700px;
+  width: 70vw;
 }
 
 .column {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: end; /* Align cells to the start (bottom of the column) */
   align-items: center; /* Center cells horizontally */
+  display: flex;
+  flex-direction: column;
   gap: 5px;
+  justify-content: end; /* Align cells to the start (bottom of the column) */
 }
 .gridCell {
-  box-sizing: border-box;
-  position: relative;
   background-color: #eee;
   border: 1px solid #ddd;
-  overflow: hidden;
-  width: 100%;
+  box-sizing: border-box;
   height: calc(
     (60vw / var(--row-count)) - 10px
   ); /* Adjust based on grid height */
+  overflow: hidden;
+  pointer-events: none;
+  position: relative;
+  width: 100%;
 }
 
 .player1Piece,
 .player2Piece {
-  width: 80%; /* Slightly smaller than the cell for visual effect */
-  height: 80%;
   border-radius: 50%;
+  height: 80%;
+  left: 50%;
   position: absolute;
   top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
+  width: 80%; /* Slightly smaller than the cell for visual effect */
 }
 
 .player1Piece {

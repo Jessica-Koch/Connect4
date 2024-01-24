@@ -1,0 +1,42 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app {
+  display: grid;
+  place-items: center;
+  grid-template-rows: min-content 1fr;
+}
+
+.heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content 1fr;
+  width: 100%;
+}
+
+.gameTitle {
+  grid-row: 1;
+  grid-column: 1 / span 2;
+  text-align: center;
+}
+
+.resetButton {
+  grid-row: 2;
+  grid-column: 1;
+  width: min-content;
+}
+
+.activePlayer {
+  grid-row: 2;
+  grid-column: 2;
+  text-align: right;
+}
+
+.gameBoard {
+  display: grid;
+  place-items: center;
+}
