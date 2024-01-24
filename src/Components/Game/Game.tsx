@@ -35,7 +35,6 @@ function Game() {
     }
 
     if (foundSlot) {
-      debugger;
       // Check for a win
       if (checkWinner(grid, columnIndex, newRow, activePlayer)) {
         // Handle the win (e.g., display a message or end the game)
