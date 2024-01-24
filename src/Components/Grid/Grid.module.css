@@ -10,12 +10,13 @@
 }
 
 .column {
-  align-items: center; /* Center cells horizontally */
+  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 5px;
-  justify-content: end; /* Align cells to the start (bottom of the column) */
+  justify-content: end;
 }
+
 .gridCell {
   background-color: #eee;
   border: 1px solid #ddd;
